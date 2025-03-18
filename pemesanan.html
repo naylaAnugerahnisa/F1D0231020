@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pemesanan Produk Petshop</title>
+    <style>
+        body {
+            font-family: comic sans-serif, sans-serif;
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .form-container {
+            background: #fae1eb;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            width: 50%;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #fdc6dd;
+            border-radius: 5px;
+        }
+        .button-group {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+        }
+        .submit-button, .reset-button {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 48%;
+            text-align: center;
+        }
+        .reset-button {
+            background-color: #dc3545;
+        }
+        .submit-button:hover {
+            background-color: #0056b3;
+        }
+        .reset-button:hover {
+            background-color: #a71d2a;
+        }
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 15px;
+            text-decoration: none;
+            font-weight: bold;
+            color: #007BFF;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Form Pemesanan Produk</h2>
+        <form action="proses_pemesanan.php" method="post">
+            <label for="nama">Nama:</label>
+            <input type="text" name="nama" id="nama" placeholder="Masukkan nama Anda" required>
+
+            <label for="tanggal">Tanggal Pemesanan:</label>
+            <input type="datetime-local" name="tanggal" id="tanggal" required>
+
+            <label for="nomor"> Nomor Telepon:</label>
+            <input type="text" name="nomor_telepon" placeholder="Masukan nomor telepon Anda" required> 
+
+            <label for="jenis_kelamin">Jenis Kelamin:</label>
+            <input type="radio" name="jenis_kelamin" value="Laki-laki"> Laki-laki
+            <input type="radio" name="jenis_kelamin" value="Perempuan"> Perempuan
+
+            <label for="produk">Pilih Produk:</label>
+            <select name="produk" id="produk" required>
+                <option value="Makanan Kucing">Makanan Kucing</option>
+                <option value="Makanan Anjing">Makanan Anjing</option>
+                <option value="Shampoo Kucing">Shampoo Kucing</option>
+                <option value="Shampoo Anjing">Shampoo Anjing</option>
+                <option value="Mainan Kucing">Mainan Gigitan Kucing</option>
+                <option value="Mainan Anjing">Mainan Gigitan Anjing</option>
+                <option value="Kandang Kucing">Kandang Kucing</option>
+                <option value="Kandang Anjing">Kandang Anjing</option>
+            </select>
+
+            <label for="jumlah">Jumlah:</label>
+            <input type="number" name="jumlah" id="jumlah" min="1" placeholder="Masukkan jumlah pesanan" required>
+
+            <div class="button-group">
+                <button type="submit" class="submit-button">Pesan Sekarang</button>
+                <button type="reset" class="reset-button">Batal</button>
+            </div>
+
+            <a href="index.html" class="back-link">Kembali ke Halaman Utama</a>
+        </form>
+    </div>
+
+</body>
+</html>
