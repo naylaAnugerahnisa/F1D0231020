@@ -1,0 +1,122 @@
+*{
+    text-decoration: none;
+    margin: 0px;
+    padding: 0px;
+}
+ body{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+    
+}
+
+.wrapper{
+    width: 1100px;
+    margin: auto;
+    position: relative;
+}
+.logo{
+    font-size: 50px;
+    font-weight: bold;
+    float: left;
+    font-family: cursive ;
+    color: #94dfff
+}
+.menu{
+    float: right;
+    
+}
+nav{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    line-height: 80px;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    background: #BFECFF;
+    z-index: 1;
+    border: 1px solid #BFECFF;
+    z-index: 1;
+    border-bottom: 1px solid #BFECFF;
+}
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+nav ul li{
+    float: left;    }
+nav ul li a{
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding:0px 16px 0px 16px;
+    text-decoration: none;
+}
+nav ul li a:hover{
+    text-decoration: underline;
+}
+ section{
+    margin: auto;
+    display: flex;
+    margin-bottom: 50px;
+
+}
+
+.kolom{
+    margin: 10px;
+    line-height: 20px;
+    text-align: justify;
+    color: #44aad6;
+    margin-right: 50px;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+}
+.kolom .deskripsi{
+    font-size: 35px;
+    font-weight: bold;
+    font-family: cursive;
+    color: #BFECFF;
+}
+h2{
+    font-family: cursive;
+    font-weight: 800;
+    font-size: 35px;
+    margin-bottom: 20px;
+    color: #90deff;
+    width: 100%;
+    line-height: 50px;
+}
+a.tbl-biru{
+    background: #3f72af;
+    border-radius: 20px;
+    margin-top: 50px;
+    padding: 15px 20px 15px 20px;
+    color: #BFECFF;
+    cursor: pointer;
+    font-weight: bold;
+}
+a.tbl-biru:hover{
+    background: #ecd2da;    
+    text-decoration: none;  
+}
+a.tbl-pink{
+    background: #3f72af;
+    border-radius: 20px;
+    margin-top: 20px;
+    padding: 15px 20px 15px 20px;
+    color: #BFECFF;
+    cursor: pointer;
+    font-weight: bold;
+}
+a.tbl-pink:hover{
+    background: #ecd2da;    
+    text-decoration: none;  
+}
+p{
+    margin: 10px 0px 10px 0px;
+    padding: 10px 0px 10px 0px;
+}

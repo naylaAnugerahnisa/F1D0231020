@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pemesanan Produk Petshop</title>
+    <style>
+        body {
+            font-family: Comic Sans MS, sans-serif;
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .form-container {
+            background: #fae1eb;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            width: 50%;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            margin-top: 10px;
+            display: block;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #fdc6dd;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .submit-button, .reset-button {
+            padding: 10px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 48%;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .submit-button {
+            background-color: #007BFF;
+            color: white;
+        }
+
+        .submit-button:hover {
+            background-color: #0056b3;
+        }
+
+        .reset-button {
+            background-color: #dc3545;
+            color: white;
+        }
+
+        .reset-button:hover {
+            background-color: #a71d2a;
+        }
+
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 15px;
+            color: #007BFF;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Form Pemesanan Produk</h2>
+        <form id="formPemesanan">
+            <label for="nama">Nama:</label>
+            <input type="text" name="nama" id="nama" placeholder="Masukkan nama Anda">
+
+            <label for="tanggal">Tanggal Pemesanan:</label>
+            <input type="datetime-local" name="tanggal" id="tanggal">
+
+            <label for="nomor_telepon">Nomor Telepon:</label>
+            <input type="text" name="nomor_telepon" id="nomor_telepon" placeholder="Masukkan nomor telepon Anda">
+
+            <label>Jenis Kelamin:</label>
+            <input type="radio" name="jenis_kelamin" value="Laki-laki" id="jkL"> <label for="jkL">Laki-laki</label>
+            <input type="radio" name="jenis_kelamin" value="Perempuan" id="jkP"> <label for="jkP">Perempuan</label>
+
+            <label for="produk">Pilih Produk:</label>
+            <select name="produk" id="produk">
+                <option value="">-- Pilih Produk --</option>
+                <option value="Makanan Kucing">Makanan Kucing</option>
+                <option value="Makanan Anjing">Makanan Anjing</option>
+                <option value="Shampoo Kucing">Shampoo Kucing</option>
+                <option value="Shampoo Anjing">Shampoo Anjing</option>
+                <option value="Mainan Kucing">Mainan Gigitan Kucing</option>
+                <option value="Mainan Anjing">Mainan Gigitan Anjing</option>
+                <option value="Kandang Kucing">Kandang Kucing</option>
+                <option value="Kandang Anjing">Kandang Anjing</option>
+            </select>
+
+            <label for="jumlah">Jumlah:</label>
+            <input type="number" name="jumlah" id="jumlah" min="1" placeholder="Masukkan jumlah pesanan">
+
+            <div class="button-group">
+                <button type="submit" class="submit-button">Pesan Sekarang</button>
+                <button type="reset" class="reset-button">Batal</button>
+            </div>
+
+            <a href="index.html" class="back-link">Kembali ke Halaman Utama</a>
+        </form>
+        <script src="validasipemesanan.js"></script>
+
+    </div>
+
+    
